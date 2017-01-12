@@ -1,0 +1,64 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;com&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../code.google.com" />
+      <root url="file://$PROJECT_DIR$/../monitoring_cloud" />
+      <root url="file://$PROJECT_DIR$/../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../initgo" />
+      <root url="file://$PROJECT_DIR$/../qiniupkg.com" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../newRevel" />
+      <root url="file://$PROJECT_DIR$/../shadowvc" />
+      <root url="file://$PROJECT_DIR$/../thrift" />
+      <root url="file://$PROJECT_DIR$/../google.golang.org" />
+      <root url="file://$PROJECT_DIR$/../beeapi" />
+      <root url="file://$PROJECT_DIR$/../iconv" />
+      <root url="file://$PROJECT_DIR$/../gateway" />
+      <root url="file://$PROJECT_DIR$/../.idea" />
+      <root url="file://$PROJECT_DIR$/../gin-react" />
+      <root url="file://$PROJECT_DIR$/../git.apache.org" />
+      <root url="file://$PROJECT_DIR$/../APP" />
+      <root url="file://$PROJECT_DIR$/../message" />
+      <root url="file://$PROJECT_DIR$/../git-wip-us.apache.org" />
+      <root url="file://$PROJECT_DIR$/../demo" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../rabbitmq-tutorials" />
+      <root url="file://$PROJECT_DIR$/../9fans.net" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../bitbucket.org" />
+      <root url="file://$PROJECT_DIR$/../ecbox-km-go" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../code.google.com" />
+      <root url="file://$PROJECT_DIR$/../monitoring_cloud" />
+      <root url="file://$PROJECT_DIR$/../sourcegraph.com" />
+      <root url="file://$PROJECT_DIR$/../initgo" />
+      <root url="file://$PROJECT_DIR$/../qiniupkg.com" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../newRevel" />
+      <root url="file://$PROJECT_DIR$/../shadowvc" />
+      <root url="file://$PROJECT_DIR$/../thrift" />
+      <root url="file://$PROJECT_DIR$/../google.golang.org" />
+      <root url="file://$PROJECT_DIR$/../beeapi" />
+      <root url="file://$PROJECT_DIR$/../iconv" />
+      <root url="file://$PROJECT_DIR$/../gateway" />
+      <root url="file://$PROJECT_DIR$/../.idea" />
+      <root url="file://$PROJECT_DIR$/../gin-react" />
+      <root url="file://$PROJECT_DIR$/../git.apache.org" />
+      <root url="file://$PROJECT_DIR$/../APP" />
+      <root url="file://$PROJECT_DIR$/../message" />
+      <root url="file://$PROJECT_DIR$/../git-wip-us.apache.org" />
+      <root url="file://$PROJECT_DIR$/../demo" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../rabbitmq-tutorials" />
+      <root url="file://$PROJECT_DIR$/../9fans.net" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../bitbucket.org" />
+      <root url="file://$PROJECT_DIR$/../ecbox-km-go" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
