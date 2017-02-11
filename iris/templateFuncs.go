@@ -10,6 +10,7 @@ import (
   "crypto/md5"
   "io"
   "encoding/hex"
+  "fmt"
 )
 
 var fileUnix string
@@ -39,14 +40,14 @@ func GetStaticMD5(url string) string {
   return url
 }
 
-var funcMaps = map[string]interface{}{
+var FuncMaps = map[string]interface{}{
   "script": func(url string) interface{} {
     if runmode != "pro" {
       url = com.Conf.DefaultString("template::devUrl", "http://localhost:4000") + GetStaticMD5(url)
     } else {
       url = GetStaticMD5(url)
     }
-    return template.HTML(`<script src="` + url + `"></script>`)
+    return template.HTML(`<script src="` + url + `" defer="defer"></script>`)
   },
   "scriptAsync": func(url string) interface{} {
     if runmode != "pro" {
@@ -60,6 +61,30 @@ var funcMaps = map[string]interface{}{
     asyncScript.type = "text/javascript";
     asyncScript.async = "async";
     document.body.appendChild(asyncScript);
+    </script>`)
+  },
+  "scriptAsyncs": func(urls ... string) interface{} {
+    var urlStr, url string
+    for _, v := range urls {
+      if runmode != "pro" {
+        url = com.Conf.DefaultString("template::devUrl", "http://localhost:4000") + GetStaticMD5(v)
+      } else {
+        url = GetStaticMD5(v)
+      }
+      urlStr += "'" + url + "',"
+    }
+    urlStr = urlStr[:(len(urlStr) - 1)]
+    fmt.Println(urls)
+    return template.HTML(`<script>
+    window.onload = function(){
+    var scriptList = [` + urlStr + `];
+    for(var k in scriptList){
+      var asyncScript = document.createElement("script");
+      asyncScript.src = scriptList[k];
+      asyncScript.type = "text/javascript";
+      document.body.appendChild(asyncScript);
+    }
+    }
     </script>`)
   },
   "style": func(url string) interface{} {

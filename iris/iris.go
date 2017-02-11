@@ -41,7 +41,7 @@ func IrisInitFramework() *Framework {
     Left:        "{{",
     Right:       "}}",
     Layout:      "",
-    Funcs:       funcMaps,
+    Funcs:       FuncMaps,
     LayoutFuncs: make(map[string]interface{}, 0),
   })).Directory("./app/view", ".html")
 
