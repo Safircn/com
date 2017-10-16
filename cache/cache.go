@@ -30,8 +30,8 @@ func (this *CacheBox) Set(key string, val interface{}, timeout int64) {
   this.rwMutex.Lock()
   expiredTime := time.Now().Add(time.Minute * time.Duration(timeout))
   this.cacheList[key] = &cacheRow{
-    expiredTime:&expiredTime,
-    data:val,
+    expiredTime: &expiredTime,
+    data:        val,
   }
   this.rwMutex.Unlock()
 }
@@ -45,14 +45,21 @@ func (this *CacheBox) Delete(key string) {
 }
 
 func (this *CacheBox) Get(key string) interface{} {
+  if obj, ok := this.GetInt(key); ok {
+    return obj
+  }
+  return nil
+}
+
+func (this *CacheBox) GetInfo(key string) (interface{}, bool) {
   this.rwMutex.RLock()
   defer this.rwMutex.RUnlock()
   if v, flag := this.cacheList[key]; flag {
     if v.expiredTime.After(time.Now()) {
-      return v.data
+      return v.data, true
     }
   }
-  return nil
+  return nil, false
 }
 
 func (this *CacheBox) GetString(key string) string {
@@ -117,9 +124,9 @@ type Cache interface {
 
 func NewCache(name string) *CacheBox {
   newCache := &CacheBox{
-    name:name,
-    cacheList:make(map[string]*cacheRow),
-    rwMutex:new(sync.RWMutex),
+    name:      name,
+    cacheList: make(map[string]*cacheRow),
+    rwMutex:   new(sync.RWMutex),
   }
   caches[name] = newCache
   return newCache
@@ -149,6 +156,6 @@ func Run(Interval int) {
   }
 }
 
-func RunTntervalTenM()  {
+func RunTntervalTenM() {
   Run(10)
 }

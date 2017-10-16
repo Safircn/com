@@ -88,3 +88,15 @@ func SmsTemplateSend(shadowvcSdk *shadowVc.ShadowVcSdk, mobile, content string) 
 	}
 	return respSmsTemplateSend.SmsTemplateSendResponse.Sid, nil
 }
+
+
+func SmsTemplateSendToRaw(shadowvcSdk *shadowVc.ShadowVcSdk, mobile, content string) (string, error) {
+  postData := make(url.Values)
+  postData.Add("mobile", mobile)
+  postData.Add("content", content)
+  bt, err := shadowvcSdk.Send("sd.sms.template.send", postData)
+  if err != nil {
+    return "", err
+  }
+  return string(bt),nil
+}

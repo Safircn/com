@@ -8,7 +8,7 @@ import (
 
 var (
   Logger *logs.BeeLogger
-  Conf config.Configer
+  Conf   config.Configer
 )
 
 func init() {
@@ -22,7 +22,7 @@ func initLog() {
   Logger = logs.NewLogger(10000)
   Logger.EnableFuncCallDepth(true)
   if Conf.String("runmode") == "pro" {
-    Logger.SetLogger("file", `{"filename":"` + Conf.DefaultString("log_path", "logs/app.log") + `"}`)
+    Logger.SetLogger("file", `{"filename":"`+Conf.DefaultString("log_path", "logs/app.log")+`"}`)
   } else {
     Logger.SetLogger("console", "")
   }
