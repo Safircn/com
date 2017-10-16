@@ -6,7 +6,7 @@ import (
   "strconv"
   "fmt"
   "strings"
-  "com"
+  "github.com/Safircn/com"
   "io/ioutil"
   "github.com/pquerna/ffjson/ffjson"
   "errors"

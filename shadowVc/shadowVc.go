@@ -1,7 +1,7 @@
 package shadowVc
 
 import (
-	"com"
+	"github.com/Safircn/com"
 	"bytes"
 	"github.com/Safircn/lib/md5"
 	"github.com/pquerna/ffjson/ffjson"

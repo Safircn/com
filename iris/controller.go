@@ -1,7 +1,7 @@
 package iris
 
 import (
-  "com"
+  "github.com/Safircn/com"
   "github.com/kataras/iris"
   "gopkg.in/go-playground/validator.v9"
   "reflect"

@@ -1,7 +1,7 @@
 package iris
 
 import (
-  "com"
+  "github.com/Safircn/com"
   "github.com/iris-contrib/middleware/logger"
   "github.com/kataras/go-sessions/sessiondb/leveldb"
   "github.com/kataras/go-template/html"

@@ -5,7 +5,7 @@ import (
   "github.com/gin-gonic/gin/render"
   "github.com/gin-gonic/gin"
   "bytes"
-  "com"
+  "github.com/Safircn/com"
 )
 
 type (

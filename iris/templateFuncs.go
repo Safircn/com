@@ -1,7 +1,7 @@
 package iris
 
 import (
-  "com"
+  "github.com/Safircn/com"
   "github.com/pquerna/ffjson/ffjson"
   "html/template"
   "strconv"

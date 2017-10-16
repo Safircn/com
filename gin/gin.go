@@ -1,7 +1,7 @@
 package gin
 
 import (
-  "com"
+  "github.com/Safircn/com"
   "github.com/gin-gonic/gin"
   "github.com/gin-gonic/contrib/sessions"
 )

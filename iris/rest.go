@@ -2,7 +2,7 @@ package iris
 
 import (
   "github.com/kataras/iris"
-  "com"
+  "github.com/Safircn/com"
 )
 
 type (

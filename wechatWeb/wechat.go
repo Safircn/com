@@ -14,7 +14,7 @@ import (
   "strings"
   "time"
   "encoding/base64"
-  "com"
+  "github.com/Safircn/com"
   "github.com/pquerna/ffjson/ffjson"
   "encoding/json"
 )

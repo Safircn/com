@@ -12,7 +12,7 @@ import (
   "strconv"
   "strings"
   "time"
-  "com"
+  "github.com/Safircn/com"
   "github.com/pquerna/ffjson/ffjson"
   "encoding/json"
   "compress/gzip"
