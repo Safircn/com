@@ -33,10 +33,14 @@ func initConf() string {
 	path, err := conf.FindConf("./")
 	if err != nil {
 		logs.Warn("无法找到配置文件")
+		Conf = config.NewFakeConfig()
+		return ""
 	}
 	Conf, err = config.NewConfig("ini", path)
 	if err != nil {
 		logs.Warn("配置文件初始化失败")
+		Conf = config.NewFakeConfig()
+		return ""
 	}
 	return path
 }
