@@ -5,13 +5,13 @@ import (
 )
 
 var (
-	validate *validator.Validate
+	Validate *validator.Validate
 )
 
 func initValidator() {
-	validate = validator.New()
+	Validate = validator.New()
 }
 
 func ValidateStruct(obj interface{}) error {
-	return validate.Struct(obj)
+	return Validate.Struct(obj)
 }
